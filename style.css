@@ -1,0 +1,234 @@
+/* --- GENERAL --- */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7d9d9;
+    background-image: url('MEDIA/motif.png');
+    background-repeat: repeat;
+    background-size: 200px;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 1rem;
+}
+
+header h1 {
+    display: inline-block;
+    padding: 0.2em 0.5em;
+    background-color: rgba(255, 255, 255, 0.95);
+    font-family: 'Dancing Script', cursive;
+    font-size: 5rem;
+    margin: 0;
+    color: #c94f4f;
+}
+
+.titre-1 {
+    display: inline-block;
+    padding: 0.2em 0.5em;
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+/* --- SECTION QUI JE SUIS --- */
+#presentation {
+    position: relative;
+    background: linear-gradient(90deg, #f8a5c2, #f78fb3);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    max-width: 900px;
+    margin: 2rem auto;
+    border-radius: 20px;
+}
+
+#presentation .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.photos-qui-suis {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.photo-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.photo-description p {
+    margin-top: 5px;
+    font-size: 0.9rem;
+    color: white;
+    text-align: center;
+}
+
+.profile-img, 
+.images-container img {
+    width: auto;
+    max-width: 260px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 4px solid white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* --- TITRES ET TEXTE --- */
+#presentation h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin: 0.5rem 0;
+}
+
+#presentation p {
+    max-width: 700px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* --- DECORS --- */
+.decor {
+    position: absolute;
+    width: 80px;
+    height: auto;
+    opacity: 0.8;
+    pointer-events: none;
+}
+.decor-left { top: 20px; left: 20px; }
+.decor-right { bottom: 20px; right: 20px; }
+
+/* --- MOBILE : DECORS SUR PETIT ÉCRAN --- */
+@media (max-width: 900px) {
+  .decor {
+    position: static;        /
+    width: 100px;            
+    margin: 12px auto;       
+    opacity: 0.95;
+    display: block;
+    text-align: center;
+  }
+}
+
+/* --- SECTION CREATIONS --- */
+#creations {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.triple-slider {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.creations-container {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 1.5rem;
+    border-radius: 20px;
+    width: 320px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    position: relative;
+}
+
+.creations-container h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: #c94f4f;
+}
+
+.creation-slider {
+    position: relative;
+}
+
+.creation-slide {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.images-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+/* --- Flèches pour images internes --- */
+.prev-img, .next-img {
+    background: none;
+    border: none;
+    font-size: 1.3rem;
+    color: #444;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.prev-img { left: -15px; }
+.next-img { right: -15px; }
+
+/* --- Flèches pour les catégories --- */
+.prev-creation, .next-creation {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #c94f4f;
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+}
+.prev-creation { left: -30px; }
+.next-creation { right: -30px; }
+
+.creation-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.caption {
+    font-size: 0.95rem;
+    max-width: 90%;
+    margin: auto;
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+    .triple-slider {
+        flex-direction: column;
+        align-items: center;
+    }
+    .creations-container {
+        width: 90%;
+    }
+}
+
+/* --- Bouton musique --- */
+#toggleMusic {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 20px;
+}
+#toggleMusic:hover {
+    background-color: #555;
+}
