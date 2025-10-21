@@ -111,7 +111,7 @@ header h1 {
 /* --- MOBILE : DECORS SUR PETIT ÉCRAN --- */
 @media (max-width: 900px) {
   .decor {
-    position: static;        /
+    position: static;        
     width: 100px;            
     margin: 12px auto;       
     opacity: 0.95;
